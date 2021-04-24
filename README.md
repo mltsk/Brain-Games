@@ -4,3 +4,4 @@
 <img src="https://github.com/mltsk/frontend-project-lvl1/actions/workflows/eslint.yml/badge.svg">
 [![asciicast](https://asciinema.org/a/U9inYOdG6I44hhy1o1fy9YvBX.svg)](https://asciinema.org/a/U9inYOdG6I44hhy1o1fy9YvBX)
 [![asciicast](https://asciinema.org/a/RnketIJHhvWJnrs8T2jOlY7sa.svg)](https://asciinema.org/a/RnketIJHhvWJnrs8T2jOlY7sa)
+[![asciicast](https://asciinema.org/a/tgjOmcxXn3qbsQh09ewpOqvYy.svg)](https://asciinema.org/a/tgjOmcxXn3qbsQh09ewpOqvYy)
