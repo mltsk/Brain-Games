@@ -14,3 +14,5 @@ lint:
 	npx eslint .
 lint fix:
 	npx eslint . --fix
+rec:
+	asciinema rec
