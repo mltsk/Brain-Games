@@ -19,6 +19,7 @@
   "homepage": "https://github.com/mltsk/frontend-project-lvl1#readme",
   "bin": {
     "brain-games": "bin/brain-games.js",
+    "brain-calc": "bin/brain-calc.js",
     "brain-even": "bin/brain-even.js"
   },
   "dependencies": {

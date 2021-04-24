@@ -1,9 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
-}
+import { getRandomInt } from '../src/cli.js';
 
 console.log('Welcome to the Brain Games!');
 const userName = readlineSync.question('May I have your name? ');
@@ -16,6 +13,7 @@ const evenGame = () => {
     const isNumberEven = number % 2 === 0 ? 'yes' : 'no';
     console.log(`Question: ${number}`);
     const answer = readlineSync.question('You answer: ');
+
     if (answer === isNumberEven) {
       console.log('Correct!');
       if (i === 2) {
