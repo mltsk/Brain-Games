@@ -7,7 +7,7 @@ const userName = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${userName}!`);
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
-const evenGame = () => {
+const gameEven = () => {
   for (let i = 0; i < 3; i += 1) {
     const number = getRandomInt(400);
     const isNumberEven = number % 2 === 0 ? 'yes' : 'no';
@@ -26,4 +26,4 @@ const evenGame = () => {
   }
 };
 
-evenGame();
+gameEven();
