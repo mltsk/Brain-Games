@@ -9,7 +9,7 @@ console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
 const evenGame = () => {
   for (let i = 0; i < 3; i += 1) {
-    const number = getRandomInt(30);
+    const number = getRandomInt(400);
     const isNumberEven = number % 2 === 0 ? 'yes' : 'no';
     console.log(`Question: ${number}`);
     const answer = readlineSync.question('You answer: ');
