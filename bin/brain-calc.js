@@ -14,9 +14,7 @@ const calculation = (a, b, operator) => {
   if (operator === '-') {
     return a - b;
   }
-  if (operator === '*') {
-    return a * b;
-  }
+  return a * b;
 };
 
 const gameCalc = () => {
@@ -26,11 +24,11 @@ const gameCalc = () => {
     const number1 = getRandomInt(30);
     const number2 = getRandomInt(30);
 
-    const correctAnswer = calculation(number1, number2, mathOperators[randomNum]);
+    const correctAnswer = Number(calculation(number1, number2, mathOperators[randomNum]));
     console.log(`Question: ${number1} ${mathOperators[randomNum]} ${number2}`);
-    const answer = readlineSync.question('You answer: ');
+    const answer = Number(readlineSync.question('You answer: '));
 
-    if (correctAnswer == answer) {
+    if (correctAnswer === answer) {
       console.log('Correct!');
       if (i === 2) {
         console.log(`Congratulations, ${userName}`);

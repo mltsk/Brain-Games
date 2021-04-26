@@ -33,11 +33,11 @@ const gameProgression = () => {
     const number2 = randomInteger(1, 7);
     const number3 = randomInteger(1, 9);
 
-    const correctAnswer = makeProgression(number1, number2, number3).missingNumber;
+    const correctAnswer = Number(makeProgression(number1, number2, number3).missingNumber);
     console.log(`Question: ${makeProgression(number1, number2, number3).progression}`);
-    const answer = readlineSync.question('You answer: ');
+    const answer = Number(readlineSync.question('You answer: '));
 
-    if (correctAnswer == answer) {
+    if (correctAnswer === answer) {
       console.log('Correct!');
       if (i === 2) {
         console.log(`Congratulations, ${userName}`);

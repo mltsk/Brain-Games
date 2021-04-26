@@ -8,17 +8,17 @@ console.log(`Hello, ${userName}!`);
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
 const isPrime = (num) => {
-    if ((num === 1) || (num === 2)) {
-        return 'yes';
-    }
-    for(let i = 2; i < num; i += 1) {
-        if(num % i === 0) {
-            return 'no';
-        }
-    }
-
+  if ((num === 1) || (num === 2)) {
     return 'yes';
-}
+  }
+  for (let i = 2; i < num; i += 1) {
+    if (num % i === 0) {
+      return 'no';
+    }
+  }
+
+  return 'yes';
+};
 
 const gamePrime = () => {
   for (let i = 0; i < 3; i += 1) {
@@ -28,7 +28,7 @@ const gamePrime = () => {
     console.log(`Question: ${number1}`);
     const answer = readlineSync.question('You answer: ');
 
-    if (correctAnswer == answer) {
+    if (correctAnswer === answer) {
       console.log('Correct!');
       if (i === 2) {
         console.log(`Congratulations, ${userName}`);

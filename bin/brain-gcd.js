@@ -29,11 +29,11 @@ const gameGcd = () => {
     const number1 = getRandomInt(100);
     const number2 = getRandomInt(100);
 
-    const correctAnswer = findGreatestDivisor(number1, number2);
+    const correctAnswer = Number(findGreatestDivisor(number1, number2));
     console.log(`Question: ${number1} ${number2}`);
-    const answer = readlineSync.question('You answer: ');
+    const answer = Number(readlineSync.question('You answer: '));
 
-    if (correctAnswer == answer) {
+    if (correctAnswer === answer) {
       console.log('Correct!');
       if (i === 2) {
         console.log(`Congratulations, ${userName}`);
