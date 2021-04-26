@@ -20,7 +20,7 @@ const gameEven = () => {
         console.log(`Congratulations, ${userName}!`);
       }
     } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${isNumberEven}'. Let's try again, ${userName}`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${isNumberEven}'. Let's try again, ${userName}!`);
       break;
     }
   }

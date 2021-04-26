@@ -36,10 +36,10 @@ const gameGcd = () => {
     if (correctAnswer === answer) {
       console.log('Correct!');
       if (i === 2) {
-        console.log(`Congratulations, ${userName}`);
+        console.log(`Congratulations, ${userName}!`);
       }
     } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. Let's try again, ${userName}`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. Let's try again, ${userName}!`);
       break;
     }
   }
