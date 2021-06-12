@@ -6,6 +6,4 @@ const askName = () => {
   console.log(`Hello, ${userName}!`);
 };
 
-export const getRandomInt = (max) => Math.floor(Math.random() * max);
-
 export default askName;
