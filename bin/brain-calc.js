@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { getRandomInt } from '../src/functions.js';
+import getRandomInt from '../src/randomInt.js';
 import game from '../src/index.js';
 import greeting from '../src/greeting.js';
 
