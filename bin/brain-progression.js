@@ -26,11 +26,11 @@ const makeProgression = (start, step, numberMissingStep) => {
 };
 
 const questionAndCorrectAnswer = () => {
-  const number1 = randomInteger(1, 12);
-  const number2 = randomInteger(1, 7);
-  const number3 = randomInteger(1, 9);
-  const correctAnswer = (makeProgression(number1, number2, number3).missingNumber.toString());
-  const question = `Question: ${makeProgression(number1, number2, number3).progression}`;
+  const start = randomInteger(1, 12);
+  const step = randomInteger(1, 7);
+  const numberMissingStep = randomInteger(1, 9);
+  const correctAnswer = (makeProgression(start, step, numberMissingStep).missingNumber.toString());
+  const question = `Question: ${makeProgression(start, step, numberMissingStep).progression}`;
   return { question, correctAnswer };
 };
 
