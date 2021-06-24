@@ -8,6 +8,7 @@ const userName = greeting('Find the greatest common divisor of given numbers.');
 const findSmallestNumber = (a, b) => (a <= b ? a : b);
 
 const findGreatestDivisor = (a, b) => {
+  if (a === 0 || b === 0) return 1;
   let greatestDivisor = 1;
   for (let i = 1; i <= findSmallestNumber(a, b); i += 1) {
     if ((a % i === 0) && (b % i === 0)) {
