@@ -1,6 +1,8 @@
 import readlineSync from 'readline-sync';
+import greeting from './greeting.js';
 
-const game = (userName, questionAndCorrectAnswer) => {
+const game = (questionAndCorrectAnswer, greetingText) => {
+  const userName = greeting(greetingText);
   for (let i = 0; i < 3; i += 1) {
     const { question, correctAnswer } = questionAndCorrectAnswer();
     console.log(question);
