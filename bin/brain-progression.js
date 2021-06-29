@@ -10,19 +10,20 @@ function randomInteger(min, max) {
 }
 
 const makeProgression = (start, step, numberMissingStep) => {
-  let progression = start;
+  const progression = [start];
   let progressionNumber;
   let missingNumber;
   for (let i = 1; i < 10; i += 1) {
     if (numberMissingStep === i) {
-      progression += ' ..';
+      progression.push(' ..');
       missingNumber = start + step * i;
     } else {
       progressionNumber = start + step * i;
-      progression = `${progression} ${progressionNumber}`;
+      progression.push(` ${progressionNumber}`);
     }
   }
-  return { progression, missingNumber };
+  // progression.join('');
+  return { progression: `${progression.join('')}`, missingNumber };
 };
 
 const questionAndCorrectAnswer = () => {
