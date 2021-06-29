@@ -22,7 +22,6 @@ const makeProgression = (start, step, numberMissingStep) => {
       progression.push(` ${progressionNumber}`);
     }
   }
-  // progression.join('');
   return { progression: `${progression.join('')}`, missingNumber };
 };
 
