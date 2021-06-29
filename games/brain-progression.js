@@ -5,28 +5,28 @@ function randomInteger(min, max) {
   return Math.round(rand);
 }
 
-const makeProgression = (start, step, numberMissingStep) => {
+const makeProgression = (start, step, missingStep) => {
   const progression = [start];
   let progressionNumber;
-  let missingNumber;
   for (let i = 1; i < 10; i += 1) {
-    if (numberMissingStep === i) {
+    if (missingStep === i) {
       progression.push(' ..');
-      missingNumber = start + step * i;
     } else {
       progressionNumber = start + step * i;
       progression.push(` ${progressionNumber}`);
     }
   }
-  return { progression: `${progression.join('')}`, missingNumber };
+  return `${progression.join('')}`;
 };
+
+const missingNumberProgression = (start, step, missingStep) => start + step * missingStep;
 
 const questionAndCorrectAnswer = () => {
   const start = randomInteger(1, 12);
   const step = randomInteger(1, 7);
-  const numberMissingStep = randomInteger(1, 9);
-  const correctAnswer = (makeProgression(start, step, numberMissingStep).missingNumber.toString());
-  const question = `Question: ${makeProgression(start, step, numberMissingStep).progression}`;
+  const missingStep = randomInteger(1, 9);
+  const correctAnswer = (missingNumberProgression(start, step, missingStep).toString());
+  const question = `Question: ${makeProgression(start, step, missingStep)}`;
   return { question, correctAnswer };
 };
 
