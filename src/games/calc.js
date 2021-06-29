@@ -1,4 +1,4 @@
-import getRandomInt from '../src/randomInt.js';
+import getRandomInt from '../randomInt.js';
 
 const greetingText = 'What is the result of the expression?';
 
