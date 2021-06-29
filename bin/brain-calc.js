@@ -9,7 +9,9 @@ const calculation = (a, b, operator) => {
   switch (operator) {
     case '+': return a + b;
     case '-': return a - b;
-    default: return a * b;
+    case '*': return a * b;
+    default:
+      throw new Error(`Unknown order state: '${operator}'!`);
   }
 };
 
