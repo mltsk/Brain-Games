@@ -1,4 +1,4 @@
-import getRandomInt from '../src/randomInt.js';
+import getRandomInt from '../randomInt.js';
 
 const greetingText = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 

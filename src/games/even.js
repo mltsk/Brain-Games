@@ -1,4 +1,4 @@
-import getRandomInt from '../src/randomInt.js';
+import getRandomInt from '../randomInt.js';
 
 const greetingText = 'Answer "yes" if the number is even, otherwise answer "no".';
 
