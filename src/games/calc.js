@@ -1,25 +1,25 @@
-import getRandomInt from '../randomInt.js';
+import getRandomInt from '../getRandomInt.js';
 
 const greetingText = 'What is the result of the expression?';
 
-const calculation = (a, b, operator) => {
+const calculate = (number1, number2, operator) => {
   switch (operator) {
-    case '+': return a + b;
-    case '-': return a - b;
-    case '*': return a * b;
+    case '+': return number1 + number2;
+    case '-': return number1 - number2;
+    case '*': return number1 * number2;
     default:
       throw new Error(`Unknown order state: '${operator}'!`);
   }
 };
 
-const questionAndCorrectAnswer = () => {
-  const randomNum = getRandomInt(3);
-  const mathOperators = ['+', '-', '*'];
+const getQuestionAndCorrectAnswer = () => {
   const number1 = getRandomInt(30);
   const number2 = getRandomInt(30);
-  const correctAnswer = (calculation(number1, number2, mathOperators[randomNum])).toString();
-  const question = `Question: ${number1} ${mathOperators[randomNum]} ${number2}`;
+  const number3 = getRandomInt(3);
+  const mathOperators = ['+', '-', '*'];
+  const correctAnswer = (calculate(number1, number2, mathOperators[number3])).toString();
+  const question = `Question: ${number1} ${mathOperators[number3]} ${number2}`;
   return { question, correctAnswer };
 };
 
-export { questionAndCorrectAnswer, greetingText };
+export { getQuestionAndCorrectAnswer, greetingText };

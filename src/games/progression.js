@@ -1,8 +1,8 @@
 const greetingText = 'What number is missing in the progression?';
 
-function randomInteger(min, max) {
-  const rand = min - 0.5 + Math.random() * (max - min + 1);
-  return Math.round(rand);
+function getRandomIntegerOfRange(min, max) {
+  const randomNumber = min - 0.5 + Math.random() * (max - min + 1);
+  return Math.round(randomNumber);
 }
 
 const makeProgression = (start, step, missingStep) => {
@@ -19,15 +19,15 @@ const makeProgression = (start, step, missingStep) => {
   return `${progression.join('')}`;
 };
 
-const missingNumberProgression = (start, step, missingStep) => start + step * missingStep;
+const getMissingNumberProgression = (start, step, missingStep) => start + step * missingStep;
 
-const questionAndCorrectAnswer = () => {
-  const start = randomInteger(1, 12);
-  const step = randomInteger(1, 7);
-  const missingStep = randomInteger(1, 9);
-  const correctAnswer = (missingNumberProgression(start, step, missingStep).toString());
+const getQuestionAndCorrectAnswer = () => {
+  const start = getRandomIntegerOfRange(1, 12);
+  const step = getRandomIntegerOfRange(1, 7);
+  const missingStep = getRandomIntegerOfRange(1, 9);
+  const correctAnswer = (getMissingNumberProgression(start, step, missingStep).toString());
   const question = `Question: ${makeProgression(start, step, missingStep)}`;
   return { question, correctAnswer };
 };
 
-export { questionAndCorrectAnswer, greetingText };
+export { getQuestionAndCorrectAnswer, greetingText };

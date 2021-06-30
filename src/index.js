@@ -1,10 +1,10 @@
 import readlineSync from 'readline-sync';
-import greeting from './greeting.js';
+import greet from './greet.js';
 
-const game = (questionAndCorrectAnswer, greetingText) => {
-  const userName = greeting(greetingText);
+const play = (getQuestionAndCorrectAnswer, greetingText) => {
+  const userName = greet(greetingText);
   for (let i = 0; i < 3; i += 1) {
-    const { question, correctAnswer } = questionAndCorrectAnswer();
+    const { question, correctAnswer } = getQuestionAndCorrectAnswer();
     console.log(question);
     const userAnswer = readlineSync.question('You answer: ');
     if (userAnswer === correctAnswer) {
@@ -19,4 +19,4 @@ const game = (questionAndCorrectAnswer, greetingText) => {
   }
 };
 
-export default game;
+export default play;
