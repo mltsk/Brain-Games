@@ -16,10 +16,10 @@ const calculate = (number1, number2, operator) => {
 const genQuestionAndCorrectAnswer = () => {
   const number1 = getRandomInt(30);
   const number2 = getRandomInt(30);
-  const indexOfOperators = getRandomInt(3);
+  const indexOfOperator = getRandomInt(3);
   const operators = ['+', '-', '*'];
-  const correctAnswer = String((calculate(number1, number2, operators[indexOfOperators])));
-  const question = `${number1} ${operators[indexOfOperators]} ${number2}`;
+  const correctAnswer = String((calculate(number1, number2, operators[indexOfOperator])));
+  const question = `${number1} ${operators[indexOfOperator]} ${number2}`;
   return { question, correctAnswer };
 };
 
