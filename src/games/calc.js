@@ -1,4 +1,4 @@
-import getRandomInt from '../utils.js';
+import { getRandomInt } from '../utils.js';
 import run from '../index.js';
 
 const gameDescription = 'What is the result of the expression?';
@@ -18,8 +18,8 @@ const genQuestionAndCorrectAnswer = () => {
   const number2 = getRandomInt(30);
   const indexOfOperators = getRandomInt(3);
   const operators = ['+', '-', '*'];
-  const correctAnswer = (calculate(number1, number2, operators[indexOfOperators])).toString();
-  const question = `Question: ${number1} ${mathOperators[number3]} ${number2}`;
+  const correctAnswer = String((calculate(number1, number2, operators[indexOfOperators])));
+  const question = `Question: ${number1} ${operators[indexOfOperators]} ${number2}`;
   return { question, correctAnswer };
 };
 
