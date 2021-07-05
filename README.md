@@ -9,10 +9,7 @@
 
 Для установки выполните следующие команды:
 ```
-git clone https://github.com/mltsk/frontend-project-lvl1.git
-cd frontend-project-lvl1
-make install
-npm link
+npm install brain-games
 ```
 ## Игры:
 ### Определение четного числа.<br>
