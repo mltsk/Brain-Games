@@ -1,5 +1,5 @@
 import getRandomInt from '../getRandomInt.js';
-import play from '../index.js';
+import genRound from '../index.js';
 
 const greetingText = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -12,6 +12,6 @@ const getQuestionAndCorrectAnswer = () => {
   return { question, correctAnswer };
 };
 
-const brainEven = play(getQuestionAndCorrectAnswer, greetingText);
+const brainEven = genRound(getQuestionAndCorrectAnswer, greetingText);
 
 export default brainEven;

@@ -1,5 +1,5 @@
 import getRandomInt from '../getRandomInt.js';
-import play from '../index.js';
+import genRound from '../index.js';
 
 const greetingText = 'Find the greatest common divisor of given numbers.';
 
@@ -24,6 +24,6 @@ const getQuestionAndCorrectAnswer = () => {
   return { question, correctAnswer };
 };
 
-const brainGcd = play(getQuestionAndCorrectAnswer, greetingText);
+const brainGcd = genRound(getQuestionAndCorrectAnswer, greetingText);
 
 export default brainGcd;

@@ -1,5 +1,5 @@
 import getRandomInt from '../getRandomInt.js';
-import play from '../index.js';
+import genRound from '../index.js';
 
 const greetingText = 'What is the result of the expression?';
 
@@ -23,6 +23,6 @@ const getQuestionAndCorrectAnswer = () => {
   return { question, correctAnswer };
 };
 
-const brainCalc = play(getQuestionAndCorrectAnswer, greetingText);
+const brainCalc = genRound(getQuestionAndCorrectAnswer, greetingText);
 
 export default brainCalc;

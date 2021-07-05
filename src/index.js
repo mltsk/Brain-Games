@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import greet from './greet.js';
 
-const play = (getQuestionAndCorrectAnswer, greetingText) => {
+const genRound  = (getQuestionAndCorrectAnswer, greetingText) => {
   const userName = greet(greetingText);
   for (let i = 0; i < 3; i += 1) {
     const { question, correctAnswer } = getQuestionAndCorrectAnswer();
@@ -19,4 +19,4 @@ const play = (getQuestionAndCorrectAnswer, greetingText) => {
   }
 };
 
-export default play;
+export default genRound;

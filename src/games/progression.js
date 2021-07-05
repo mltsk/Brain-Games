@@ -1,4 +1,4 @@
-import play from '../index.js';
+import genRound from '../index.js';
 const greetingText = 'What number is missing in the progression?';
 
 function getRandomIntegerOfRange(min, max) {
@@ -31,6 +31,6 @@ const getQuestionAndCorrectAnswer = () => {
   return { question, correctAnswer };
 };
 
-const brainProgression = play(getQuestionAndCorrectAnswer, greetingText);
+const brainProgression = genRound(getQuestionAndCorrectAnswer, greetingText);
 
 export default brainProgression;
