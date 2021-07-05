@@ -7,15 +7,14 @@ const run  = (genQuestionAndCorrectAnswer, gameDescription) => {
     const { question, correctAnswer } = genQuestionAndCorrectAnswer();
     console.log(question);
     const userAnswer = readlineSync.question('You answer: ');
-    if (userAnswer === correctAnswer) {
-      console.log('Correct!');
-      if (i === 2) {
-        console.log(`Congratulations, ${userName}!`);
-      }
-    } else {
+    if (i === 2) {
+      console.log(`Congratulations, ${userName}!`);
+    }
+    if (userAnswer !== correctAnswer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. Let's try again, ${userName}!`);
       break;
     }
+    console.log('Correct!');
   }
 };
 
