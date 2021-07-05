@@ -1,10 +1,7 @@
 import run from '../index.js';
-const gameDescription = 'What number is missing in the progression?';
+import { getRandomIntegerOfRange } from '../utils.js';
 
-function getRandomIntegerOfRange(min, max) {
-  const randomNumber = min - 0.5 + Math.random() * (max - min + 1);
-  return Math.round(randomNumber);
-}
+const gameDescription = 'What number is missing in the progression?';
 
 const makeProgression = (start, step, missingStep) => {
   const progression = [start];
@@ -31,6 +28,6 @@ const genQuestionAndCorrectAnswer = () => {
   return { question, correctAnswer };
 };
 
-const brainProgression = run(genQuestionAndCorrectAnswer, gameDescription);
+const brainProgression = () => run(genQuestionAndCorrectAnswer, gameDescription);
 
 export default brainProgression;

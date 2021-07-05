@@ -12,6 +12,6 @@ const genQuestionAndCorrectAnswer = () => {
   return { question, correctAnswer };
 };
 
-const brainEven = run(genQuestionAndCorrectAnswer, gameDescription);
+const brainEven = () => run(genQuestionAndCorrectAnswer, gameDescription);
 
 export default brainEven;

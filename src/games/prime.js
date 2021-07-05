@@ -18,6 +18,6 @@ const genQuestionAndCorrectAnswer = () => {
   return { question, correctAnswer };
 };
 
-const brainPrime = run(genQuestionAndCorrectAnswer, gameDescription);
+const brainPrime = () => run(genQuestionAndCorrectAnswer, gameDescription);
 
 export default brainPrime;
