@@ -1,10 +1,10 @@
 import readlineSync from 'readline-sync';
 import greet from './greet.js';
 
-const genRound  = (getQuestionAndCorrectAnswer, greetingText) => {
-  const userName = greet(greetingText);
+const run  = (genQuestionAndCorrectAnswer, gameDescription) => {
+  const userName = greet(gameDescription);
   for (let i = 0; i < 3; i += 1) {
-    const { question, correctAnswer } = getQuestionAndCorrectAnswer();
+    const { question, correctAnswer } = genQuestionAndCorrectAnswer();
     console.log(question);
     const userAnswer = readlineSync.question('You answer: ');
     if (userAnswer === correctAnswer) {
@@ -19,4 +19,4 @@ const genRound  = (getQuestionAndCorrectAnswer, greetingText) => {
   }
 };
 
-export default genRound;
+export default run;

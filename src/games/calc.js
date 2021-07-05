@@ -1,7 +1,7 @@
 import getRandomInt from '../getRandomInt.js';
-import genRound from '../index.js';
+import run from '../index.js';
 
-const greetingText = 'What is the result of the expression?';
+const gameDescription = 'What is the result of the expression?';
 
 const calculate = (number1, number2, operator) => {
   switch (operator) {
@@ -13,7 +13,7 @@ const calculate = (number1, number2, operator) => {
   }
 };
 
-const getQuestionAndCorrectAnswer = () => {
+const genQuestionAndCorrectAnswer = () => {
   const number1 = getRandomInt(30);
   const number2 = getRandomInt(30);
   const number3 = getRandomInt(3);
@@ -23,6 +23,6 @@ const getQuestionAndCorrectAnswer = () => {
   return { question, correctAnswer };
 };
 
-const brainCalc = genRound(getQuestionAndCorrectAnswer, greetingText);
+const brainCalc = run(genQuestionAndCorrectAnswer, gameDescription);
 
 export default brainCalc;

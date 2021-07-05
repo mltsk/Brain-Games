@@ -1,7 +1,7 @@
 import getRandomInt from '../getRandomInt.js';
-import genRound from '../index.js';
+import run from '../index.js';
 
-const greetingText = 'Find the greatest common divisor of given numbers.';
+const gameDescription = 'Find the greatest common divisor of given numbers.';
 
 const findSmallestNumber = (number1, number2) => (number1 <= number2 ? number1 : number2);
 
@@ -16,7 +16,7 @@ const findGreatestDivisor = (number1, number2) => {
   return greatestDivisor;
 };
 
-const getQuestionAndCorrectAnswer = () => {
+const genQuestionAndCorrectAnswer = () => {
   const number1 = getRandomInt(100);
   const number2 = getRandomInt(100);
   const correctAnswer = (findGreatestDivisor(number1, number2)).toString();
@@ -24,6 +24,6 @@ const getQuestionAndCorrectAnswer = () => {
   return { question, correctAnswer };
 };
 
-const brainGcd = genRound(getQuestionAndCorrectAnswer, greetingText);
+const brainGcd = run(genQuestionAndCorrectAnswer, gameDescription);
 
 export default brainGcd;
