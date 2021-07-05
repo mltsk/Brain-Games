@@ -1,4 +1,5 @@
 import getRandomInt from '../getRandomInt.js';
+import play from '../index.js';
 
 const greetingText = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -11,4 +12,6 @@ const getQuestionAndCorrectAnswer = () => {
   return { question, correctAnswer };
 };
 
-export { getQuestionAndCorrectAnswer, greetingText };
+const brainEven = play(getQuestionAndCorrectAnswer, greetingText);
+
+export default brainEven;

@@ -1,4 +1,5 @@
 import getRandomInt from '../getRandomInt.js';
+import play from '../index.js';
 
 const greetingText = 'What is the result of the expression?';
 
@@ -22,4 +23,6 @@ const getQuestionAndCorrectAnswer = () => {
   return { question, correctAnswer };
 };
 
-export { getQuestionAndCorrectAnswer, greetingText };
+const brainCalc = play(getQuestionAndCorrectAnswer, greetingText);
+
+export default brainCalc;

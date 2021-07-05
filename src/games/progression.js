@@ -1,3 +1,4 @@
+import play from '../index.js';
 const greetingText = 'What number is missing in the progression?';
 
 function getRandomIntegerOfRange(min, max) {
@@ -30,4 +31,6 @@ const getQuestionAndCorrectAnswer = () => {
   return { question, correctAnswer };
 };
 
-export { getQuestionAndCorrectAnswer, greetingText };
+const brainProgression = play(getQuestionAndCorrectAnswer, greetingText);
+
+export default brainProgression;
