@@ -16,9 +16,9 @@ const calculate = (number1, number2, operator) => {
 const genQuestionAndCorrectAnswer = () => {
   const number1 = getRandomInt(30);
   const number2 = getRandomInt(30);
-  const indexOfMathOperators = getRandomInt(3);
-  const mathOperators = ['+', '-', '*'];
-  const correctAnswer = (calculate(number1, number2, mathOperators[indexOfMathOperators])).toString();
+  const indexOfOperators = getRandomInt(3);
+  const operators = ['+', '-', '*'];
+  const correctAnswer = (calculate(number1, number2, operators[indexOfOperators])).toString();
   const question = `Question: ${number1} ${mathOperators[number3]} ${number2}`;
   return { question, correctAnswer };
 };
