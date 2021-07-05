@@ -20,7 +20,7 @@ const genQuestionAndCorrectAnswer = () => {
   const number1 = getRandomInt(100);
   const number2 = getRandomInt(100);
   const correctAnswer = (findGreatestDivisor(number1, number2)).toString();
-  const question = `Question: ${number1} ${number2}`;
+  const question = `${number1} ${number2}`;
   return { question, correctAnswer };
 };
 

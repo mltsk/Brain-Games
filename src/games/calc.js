@@ -19,7 +19,7 @@ const genQuestionAndCorrectAnswer = () => {
   const indexOfOperators = getRandomInt(3);
   const operators = ['+', '-', '*'];
   const correctAnswer = String((calculate(number1, number2, operators[indexOfOperators])));
-  const question = `Question: ${number1} ${operators[indexOfOperators]} ${number2}`;
+  const question = `${number1} ${operators[indexOfOperators]} ${number2}`;
   return { question, correctAnswer };
 };
 

@@ -27,7 +27,7 @@ const genQuestionAndCorrectAnswer = () => {
   const step = getRandomIntegerOfRange(1, 7);
   const missingStep = getRandomIntegerOfRange(1, 9);
   const correctAnswer = (getMissingNumberProgression(start, step, missingStep).toString());
-  const question = `Question: ${makeProgression(start, step, missingStep)}`;
+  const question = `${makeProgression(start, step, missingStep)}`;
   return { question, correctAnswer };
 };
 

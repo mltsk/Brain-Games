@@ -7,8 +7,8 @@ const isEven = (number) => number % 2 === 0;
 
 const genQuestionAndCorrectAnswer = () => {
   const number = getRandomInt(400);
-  const question = `Question: ${number}`;
   const correctAnswer = isEven(number) ? 'yes' : 'no';
+  const question = `${number}`;
   return { question, correctAnswer };
 };
 

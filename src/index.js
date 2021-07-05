@@ -7,7 +7,7 @@ const run  = (genQuestionAndCorrectAnswer, gameDescription) => {
   console.log(`${gameDescription}`);
   for (let i = 0; i < 3; i += 1) {
     const { question, correctAnswer } = genQuestionAndCorrectAnswer();
-    console.log(question);
+    console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('You answer: ');
     if (i === 2) {
       console.log(`Congratulations, ${userName}!`);
