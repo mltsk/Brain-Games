@@ -23,7 +23,7 @@ const generateRound = () => {
   const start = getRandomIntegerOfRange(1, 12);
   const step = getRandomIntegerOfRange(1, 7);
   const index = getRandomIntegerOfRange(1, 9);
-  const correctAnswer = (calcProgressionNumber (start, step, index).toString());
+  const correctAnswer = String(calcProgressionNumber (start, step, index));
   const question = `${makeProgression(start, step, index)}`;
   return { question, correctAnswer };
 };

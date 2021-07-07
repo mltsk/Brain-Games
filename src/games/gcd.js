@@ -13,7 +13,7 @@ const findGreatestDivisor = (number1, number2) => {
 const generateRound = () => {
   const number1 = generateRandomInt(100);
   const number2 = generateRandomInt(100);
-  const correctAnswer = (findGreatestDivisor(number1, number2)).toString();
+  const correctAnswer = String(findGreatestDivisor(number1, number2));
   const question = `${number1} ${number2}`;
   return { question, correctAnswer };
 };
