@@ -12,13 +12,11 @@ const run = (generateRound, gameDescription) => {
     const userAnswer = readlineSync.question('You answer: ');
     if (userAnswer !== correctAnswer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. Let's try again, ${userName}!`);
-      break;
+      return;
     }
     console.log('Correct!');
-    if (i === 2) {
-      console.log(`Congratulations, ${userName}!`);
-    }
   }
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export default run;

@@ -8,7 +8,7 @@ const findGreatestDivisor = (number1, number2) => {
     return number1;
   }
   return findGreatestDivisor(number2, number1 % number2);
-}
+};
 
 const generateRound = () => {
   const number1 = generateRandomInt(100);
