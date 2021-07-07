@@ -24,6 +24,6 @@ const genQuestionAndCorrectAnswer = () => {
   return { question, correctAnswer };
 };
 
-const runBrainGcd = () => run(genQuestionAndCorrectAnswer, gameDescription);
+const runGcdGame = () => run(genQuestionAndCorrectAnswer, gameDescription);
 
-export default runBrainGcd;
+export default runGcdGame;

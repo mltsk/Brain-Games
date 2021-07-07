@@ -28,6 +28,6 @@ const genQuestionAndCorrectAnswer = () => {
   return { question, correctAnswer };
 };
 
-const runBrainProgression = () => run(genQuestionAndCorrectAnswer, gameDescription);
+const runProgressionGame = () => run(genQuestionAndCorrectAnswer, gameDescription);
 
-export default runBrainProgression;
+export default runProgressionGame;
