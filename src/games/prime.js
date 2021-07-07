@@ -11,13 +11,13 @@ const isPrime = (num) => {
   return true;
 };
 
-const genQuestionAndCorrectAnswer = () => {
+const generateRound = () => {
   const number = getRandomInt(400);
   const question = `${number}`;
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
   return { question, correctAnswer };
 };
 
-const runPrimeGame = () => run(genQuestionAndCorrectAnswer, gameDescription);
+const runPrimeGame = () => run(generateRound, gameDescription);
 
 export default runPrimeGame;

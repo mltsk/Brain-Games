@@ -16,7 +16,7 @@ const findGreatestDivisor = (number1, number2) => {
   return greatestDivisor;
 };
 
-const genQuestionAndCorrectAnswer = () => {
+const generateRound = () => {
   const number1 = getRandomInt(100);
   const number2 = getRandomInt(100);
   const correctAnswer = (findGreatestDivisor(number1, number2)).toString();
@@ -24,6 +24,6 @@ const genQuestionAndCorrectAnswer = () => {
   return { question, correctAnswer };
 };
 
-const runGcdGame = () => run(genQuestionAndCorrectAnswer, gameDescription);
+const runGcdGame = () => run(generateRound, gameDescription);
 
 export default runGcdGame;

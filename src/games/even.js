@@ -5,13 +5,13 @@ const gameDescription = 'Answer "yes" if the number is even, otherwise answer "n
 
 const isEven = (number) => number % 2 === 0;
 
-const genQuestionAndCorrectAnswer = () => {
+const generateRound = () => {
   const number = getRandomInt(400);
   const correctAnswer = isEven(number) ? 'yes' : 'no';
   const question = `${number}`;
   return { question, correctAnswer };
 };
 
-const runEvenGame = () => run(genQuestionAndCorrectAnswer, gameDescription);
+const runEvenGame = () => run(generateRound, gameDescription);
 
 export default runEvenGame;

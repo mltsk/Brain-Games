@@ -19,7 +19,7 @@ const makeProgression = (start, step, missingStep) => {
 
 const getMissingNumberProgression = (start, step, missingStep) => start + step * missingStep;
 
-const genQuestionAndCorrectAnswer = () => {
+const generateRound = () => {
   const start = getRandomIntegerOfRange(1, 12);
   const step = getRandomIntegerOfRange(1, 7);
   const missingStep = getRandomIntegerOfRange(1, 9);
@@ -28,6 +28,6 @@ const genQuestionAndCorrectAnswer = () => {
   return { question, correctAnswer };
 };
 
-const runProgressionGame = () => run(genQuestionAndCorrectAnswer, gameDescription);
+const runProgressionGame = () => run(generateRound, gameDescription);
 
 export default runProgressionGame;

@@ -13,7 +13,7 @@ const calculate = (number1, number2, operator) => {
   }
 };
 
-const genQuestionAndCorrectAnswer = () => {
+const generateRound = () => {
   const number1 = getRandomInt(30);
   const number2 = getRandomInt(30);
   const indexOfOperator = getRandomInt(3);
@@ -23,6 +23,6 @@ const genQuestionAndCorrectAnswer = () => {
   return { question, correctAnswer };
 };
 
-const runCalcGame = () => run(genQuestionAndCorrectAnswer, gameDescription);
+const runCalcGame = () => run(generateRound, gameDescription);
 
 export default runCalcGame;
