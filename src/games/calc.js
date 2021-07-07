@@ -23,6 +23,6 @@ const genQuestionAndCorrectAnswer = () => {
   return { question, correctAnswer };
 };
 
-const brainCalc = () => run(genQuestionAndCorrectAnswer, gameDescription);
+const runBrainCalc = () => run(genQuestionAndCorrectAnswer, gameDescription);
 
-export default brainCalc;
+export default runBrainCalc;
