@@ -5,17 +5,16 @@ const gameDescription = 'What number is missing in the progression?';
 
 const makeProgression = (start, step, index) => {
   const progression = [start];
-  let progressionNumber;
   const progressionLength = 10;
   for (let i = 1; i < progressionLength; i += 1) {
     if (index === i) {
-      progression.push(' ..');
+      progression.push('..');
     } else {
-      progressionNumber = start + step * i;
-      progression.push(` ${progressionNumber}`);
+      const progressionNumber = start + step * i;
+      progression.push(progressionNumber);
     }
   }
-  return `${progression.join('')}`;
+  return progression.join(' ');
 };
 
 const calcProgressionNumber = (start, step, index) => start + step * index;
