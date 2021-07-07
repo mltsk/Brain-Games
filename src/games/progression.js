@@ -3,11 +3,11 @@ import { getRandomIntegerOfRange } from '../utils.js';
 
 const gameDescription = 'What number is missing in the progression?';
 
-const makeProgression = (start, step, missingStep) => {
+const makeProgression = (start, step, missingIndex) => {
   const progression = [start];
   let progressionNumber;
   for (let i = 1; i < 10; i += 1) {
-    if (missingStep === i) {
+    if (missingIndex === i) {
       progression.push(' ..');
     } else {
       progressionNumber = start + step * i;
@@ -17,14 +17,14 @@ const makeProgression = (start, step, missingStep) => {
   return `${progression.join('')}`;
 };
 
-const getMissingNumberProgression = (start, step, missingStep) => start + step * missingStep;
+const getMissingNumberProgression = (start, step, missingIndex) => start + step * missingIndex;
 
 const generateRound = () => {
   const start = getRandomIntegerOfRange(1, 12);
   const step = getRandomIntegerOfRange(1, 7);
-  const missingStep = getRandomIntegerOfRange(1, 9);
-  const correctAnswer = (getMissingNumberProgression(start, step, missingStep).toString());
-  const question = `${makeProgression(start, step, missingStep)}`;
+  const missingIndex = getRandomIntegerOfRange(1, 9);
+  const correctAnswer = (getMissingNumberProgression(start, step, missingIndex).toString());
+  const question = `${makeProgression(start, step, missingIndex)}`;
   return { question, correctAnswer };
 };
 
