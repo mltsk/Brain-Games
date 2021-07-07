@@ -1,4 +1,4 @@
-import { getRandomInt } from '../utils.js';
+import { generateRandomInt } from '../utils.js';
 import run from '../index.js';
 
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -6,7 +6,7 @@ const gameDescription = 'Answer "yes" if the number is even, otherwise answer "n
 const isEven = (number) => number % 2 === 0;
 
 const generateRound = () => {
-  const number = getRandomInt(400);
+  const number = generateRandomInt(400);
   const correctAnswer = isEven(number) ? 'yes' : 'no';
   const question = `${number}`;
   return { question, correctAnswer };
