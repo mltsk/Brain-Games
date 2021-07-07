@@ -6,7 +6,8 @@ const gameDescription = 'What number is missing in the progression?';
 const makeProgression = (start, step, index) => {
   const progression = [start];
   let progressionNumber;
-  for (let i = 1; i < 10; i += 1) {
+  const progressionLength = 10;
+  for (let i = 1; i < progressionLength; i += 1) {
     if (index === i) {
       progression.push(' ..');
     } else {
