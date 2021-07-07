@@ -5,7 +5,8 @@ const run = (generateRound, gameDescription) => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log(`${gameDescription}`);
-  for (let i = 0; i < 3; i += 1) {
+  const numberOfRounds = 3;
+  for (let i = 0; i < numberOfRounds; i += 1) {
     const { question, correctAnswer } = generateRound();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('You answer: ');
