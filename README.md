@@ -9,7 +9,10 @@
 
 Для установки выполните следующие команды:
 ```
-npm install brain-games -g
+git clone git@github.com:mltsk/Brain-Games.git
+cd Brain-Games
+make install
+npm link
 ```
 ## Игры:
 ### Определение четного числа.<br>
